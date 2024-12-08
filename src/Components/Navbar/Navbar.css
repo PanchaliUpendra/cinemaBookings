@@ -5,6 +5,9 @@
     justify-content: space-between;
     background-color: black;
     padding:5px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar-logo{
@@ -31,4 +34,9 @@
     border: 1px solid white;
     text-transform: capitalize;
     border-radius: 4px;
+}
+
+.navbar-login>p:hover{
+    background-color: #1DE782;
+    cursor: pointer;
 }

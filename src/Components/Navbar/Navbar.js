@@ -9,7 +9,7 @@ function Navbar(){
     return(
         <>
             <div className="navbar-con">
-                <div className="navbar-logo">
+                <div className="navbar-logo" onClick={()=>navigate('/')}>
                     <img src={Cinemalogo} alt='cinema logo' className="nav-cine-logo"/>
                 </div>
                 <div className="navbar-login">
