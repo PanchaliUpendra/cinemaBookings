@@ -9,19 +9,34 @@ import Bookingdetails from './Components/Bookingdetails/Bookingdetails';
 import Addmovies from './Components/Addmovies/Addmovies';
 import AddTheaters from './Components/Addtheaters/AddTheaters';
 import Ticketadmhistory from './Components/Ticketadmhistory/Ticketadmhistory';
+import { useSelector } from 'react-redux';
+import Mytickets from './Components/Mytickets/Mytickets';
 
 function App() {
+  const isLoggedIn = useSelector((state)=>state.userdata.isLoggedIn);
+  const userrole = useSelector((state)=>state.userdata.userrole);
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
+        {
+          isLoggedIn ===false && <Route path='/login' element={<Login/>}/>
+        }
+        {
+          isLoggedIn ===false && <Route path='/register' element={<Register/>}/>
+        }
         <Route path='/eachmovie/:movieid' element={<Eachmovie/>}/>
         <Route path='/bookingdetails' element={<Bookingdetails/>}/>
-        <Route path='/addmovies' element={<Addmovies/>}/>
-        <Route path='/addtheaters' element={<AddTheaters/>}/>
+        {
+          isLoggedIn && userrole==='admin' && 
+          <>
+            <Route path='/addmovies' element={<Addmovies/>}/>
+            <Route path='/addtheaters' element={<AddTheaters/>}/>
+          </>
+        }
+        
         <Route path='/ticketadmhistory' element={<Ticketadmhistory/>}/>
+        <Route path='/mytickets' element={<Mytickets/>}/>
       </Routes>
     </BrowserRouter>
   );

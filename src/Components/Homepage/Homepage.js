@@ -5,9 +5,12 @@ import Navbar from "../Navbar/Navbar";
 import Poster1 from '../../Assets/rrrposter.jpg';
 import Poster3 from '../../Assets/salaar.jpg';
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Homepage(){
     const navigate = useNavigate();
+    const isLoggedIn = useSelector((state)=>state.userdata.isLoggedIn);
+    const userrole = useSelector((state)=>state.userdata.userrole);
     return(
         <>
             <Navbar/>
@@ -17,10 +20,14 @@ function Homepage(){
                 <div className="homepage-blur-img2"></div>
 
                 {/* admin below navbar */}
-                <ul className="homepage-admin-nav">
-                    <li onClick={()=>navigate('/addmovies')}>Add Movies</li>
-                    <li onClick={()=>navigate('/addtheaters')}>Add Theaters</li>
-                </ul>
+                {
+                    isLoggedIn && userrole==='admin' && 
+                    <ul className="homepage-admin-nav">
+                        <li onClick={()=>navigate('/addmovies')}>Add Movies</li>
+                        <li onClick={()=>navigate('/addtheaters')}>Add Theaters</li>
+                    </ul>
+                }
+                
 
                 {/* now showing */}
                 <h1 className="homepage-header">Now Showing</h1>

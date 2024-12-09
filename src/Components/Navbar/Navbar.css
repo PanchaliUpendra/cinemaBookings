@@ -39,4 +39,14 @@
 .navbar-login>p:hover{
     background-color: #1DE782;
     cursor: pointer;
+    border: 1px solid #1DE782;
+}
+
+.navbar-logout-btn{
+    background-color: red;
+    border: 1px solid red;
+}
+
+.navbar-logout-btn:hover{
+    background-color: rgb(184, 21, 21);
 }

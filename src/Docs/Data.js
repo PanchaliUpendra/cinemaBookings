@@ -1,3 +1,6 @@
+
+export const API_URL = 'http://localhost:8000';
+
 export const Shows =[
     {
         start:'06:00',
