@@ -32,11 +32,15 @@ function App() {
           <>
             <Route path='/addmovies' element={<Addmovies/>}/>
             <Route path='/addtheaters' element={<AddTheaters/>}/>
+            <Route path='/bookingdetails' element={<Bookingdetails/>}/>
           </>
         }
         
         <Route path='/ticketadmhistory' element={<Ticketadmhistory/>}/>
-        <Route path='/mytickets' element={<Mytickets/>}/>
+        {
+          isLoggedIn && <Route path='/mytickets' element={<Mytickets/>}/>
+        }
+        
       </Routes>
     </BrowserRouter>
   );

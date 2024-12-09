@@ -19,6 +19,8 @@ function Eachmovie(){
     const allTheatersData = useSelector((state)=>state.theatersdata.data);
     const isLoggedIn = useSelector((state)=>state.userdata.isLoggedIn);
     const useruid = useSelector((state)=>state.userdata.useruid);
+    const username = useSelector((state)=>state.userdata.username);
+    const useremail = useSelector((state)=>state.userdata.useremail);
     const [showloading,setshowloading] = useState(false);
     const [nextDates,setNextDates] = useState([]);
     const [bookingDetails,setBookingDetails] = useState({
@@ -36,7 +38,9 @@ function Eachmovie(){
         endtime:'',
         moviedes:'',
         moviedur:0,
-        movietype:''
+        movietype:'',
+        useremail:'',
+        username:''
     });
 
     async function handleBookNewTickets(e){
@@ -52,7 +56,9 @@ function Eachmovie(){
                 body:JSON.stringify({
                     ...bookingDetails,
                     bookinguid:tempbookid,
-                    userid:useruid
+                    userid:useruid,
+                    useremail:useremail,
+                    username:username
                 }),
                 credentials:'include'
             });
