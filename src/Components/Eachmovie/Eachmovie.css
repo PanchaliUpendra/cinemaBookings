@@ -71,7 +71,7 @@
     border-radius: 20px;
 }
 
-.eachmovie-theaters-each:hover{
+.active-theater, .eachmovie-theaters-each:hover{
     background-color: #14b565;
     cursor: pointer;
     border: 1px solid #14b565;
@@ -106,7 +106,7 @@
     justify-content: center;
 }
 
-.eachmovie-dates-each:hover{
+.active-datesdata,.eachmovie-dates-each:hover{
     background-color: #14b565;
     cursor: pointer;
     border: 1px solid #14b565;
@@ -159,7 +159,7 @@
     cursor: pointer;
 }
 
-.eachmovie-shows-each:hover{
+.active-timedata , .eachmovie-shows-each:hover{
     background-color: #14b565;
     border: 1px solid #14b565;
 }
@@ -169,6 +169,7 @@
     border: none;
     color: white;
     cursor: pointer;
+    outline: none;
 }
 
 .eachmovie-shows-each>input[type='time']::-webkit-calendar-picker-indicator {
@@ -177,3 +178,148 @@
 .eachmovie-shows-each>input[type='time']::-moz-calendar-picker-indicator {
     display: none;
 }
+
+/* eachmovie-booking-tickets-select */
+.eachmovie-booking-tickets-select{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.eachmovie-booking-tickets-select>label{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+}
+
+.eachmovie-booking-tickets-select>select{
+    width: 170px;
+    height: 28px;
+    background-color: #14b565;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.eachmovie-booking-tickets-select>select option{
+    background-color: white;
+    color: black;
+}
+
+/* eachmovie-pleaselogin */
+.eachmovie-pleaselogin{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+.eachmovie-pleaselogin>span{
+    color: #14b565;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* eachmovie-receipt-con */
+.eachmovie-receipt-con{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+    
+}
+
+.eachmovie-booking-receipt{
+    width: 300px;
+    color: white;
+    margin-left: 20px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/* eachmovie-receipt-header */
+.eachmovie-receipt-header{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.eachmovie-receipt-schedule{
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* eachmovie-receipt-each */
+.eachmovie-receipt-each>p{
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.eachmovie-receipt-each>h2{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-top: 3px;
+}
+
+.eachmovie-receipt-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eachmovie-receipt-transaction{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.eachmovie-receipt-transaction-each{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.transaction-details-each>p{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.transaction-details-each>h2{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.transaction-payment{
+    border: 1px solid white;
+    border-left: hidden;
+    border-right: hidden;
+    padding: 5px 0px;
+}
+
+.eachmovie-booking-receipt>button{
+    min-height: 30px;
+    padding: 5px 10px;
+    background-color: #14b565;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+

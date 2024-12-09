@@ -110,7 +110,7 @@ function Addtheaters(){
                             }))}/>
                         </div>
                     </div>
-                    <button onClick={(e)=>letsAddTheater(e)}>+ add theater</button>
+                    <button onClick={(e)=>letsAddTheater(e)} style={{background:'blue',color:'white'}}>+ add theater</button>
                 </form>
 
                 {/* all theaters */}
